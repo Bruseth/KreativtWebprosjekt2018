@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <title>T-map</title>
+    
+    <!--Linker sammen html og css fil. -->
+    <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+    
+<body>
+    <!--Kodet av Fredrik Bruseth. Divene tas i bruk til sidens informasjonsboks med tekst. -->
+      <div id="showBox" class="modal">
+            
+            <div class="modal-dialog">
+                
+                <div class="modal-content">       
+                    
+                    <header class="box-Container">
+                            <a href="#" class="close">x</a>
+                            <h2>Fun facts about the Subway in Oslo </h2>
+                    </header>
+                
+                    <div class="box-container">
+                        <p>- The subway had the maiden voyage on May 22, 1966, where King Harald Olav V was on board.</p>
+                        <p>- Ryen Station is the main workshop for the subways. This workshop will use solar cells for a greener alternative</p>
+                        <p>-The trains are designed by Porsche and manufactured by Siemens</p>
+                        <p></p>
+                    </div>
+                    
+                    <footer class="footerContainer">
+                        <p>You can buy tickets at vending machines and selected outlets, and in the future through our website; D</p>
+                    </footer> 
+                    
+                </div>
+            </div>
+     </div>
+    <!--slutt på kode av Fredrik Bruseth -->
+    
+    <!-- kodet av Axel Grøner: container som inneholder sidens visuelle elementer-->
+<div id="container"> 
+    
+    <div id="background">
+        <img id="city" src="images/Oslo-city-view.jpg">
+        <img id="kart" src="images/tbanekart%20copy.png">
+    </div>
+    
+    <div id="opacityBackground"></div>
+    
+    <!-- image tager for alle de bevegene togene-->
+    <img id="tog1" class="tog" src="images/tog%20ikon.png">
+    <img id="tog2" class="tog" src="images/tog%20ikon.png">
+    <img id="tog3" class="tog" src="images/tog%20ikon.png">
+    <img id="tog4" class="tog" src="images/tog%20ikon.png">
+    <img id="tog5" class="tog" src="images/tog%20ikon.png">
+    
+    <!-- slutt på kode av axel Grøner-->
+    
+<!-- Laget av Helene Margel:
+Start på Menyen. 
+Menyen skal inneholde de mest populære turistattraksjonene. Vise de på kartet med en rød prikk og linke til stasjonssiden. bruker a tag for å få til dette-->    
+     <div id="menu">
+        
+        <h1 id="menuTitle">What to see in Oslo!</h1>
+         
+        <a href="operaen.html">
+            <div id="operaTitle">
+                <div>
+                    <h2 id="operaTitle" class="menuTitles">The Opera House</h2>
+                    <div id="mapMarker1" class="mapMarker"></div>
+                </div>
+            </div>
+        </a>
+         
+         <a href="holmenkollen.html">
+             <div id="holmenkollenTitle">
+                 <div>
+                     <h2 id="holmenkollenTitle" class="menuTitles">Holmenkollen</h2>
+                 </div>
+                 <div id="mapMarker2" class="mapMarker"></div>
+             </div>
+         </a>
+                       
+         <a href="munchMuseet.html">
+            <div id="munchTitle">
+                <div>
+                    <h2 id="munchTitle" class="menuTitles">The Munch Museum</h2>
+                </div>
+                <div id="mapMarker3" class="mapMarker"></div>
+            </div>
+         </a>
+            
+         <a href="kolsaastoppen.html">   
+            <div id="kolsåsTitle">
+                <div>
+                    <h2 id="kolsåsTitle" class="menuTitles">Kolsås viewpoint</h2>
+                </div>
+                <div id="mapMarker4" class="mapMarker"></div>
+            </div>
+         </a>
+                
+         <a href="frognerseteren.html">
+            <div id="frognerseterenTitle">
+                <div>
+                    <h2 id="forgnerseterenTitle" class="menuTitles"> Frognerseteren Walk</h2>
+                </div>
+                <div id="mapMarker5" class="mapMarker"></div>
+            </div>
+         </a>
+          
+    </div>
+<!-- Slutt på Menyen for stasjonene. - Helene Margel-->
+    
+<!--Laget av Fredrik Bruseth:
+    Meny for overskrift for siden med en div som inneholder <p>-tagger med informasjon om siden. 
+    Section med id= button har en a-tagg for å linke til "modal" boksen". Blir til en knapp--> 
+
+    <div id="menu2">
+         <h1 id="header">T-Map!</h1>
+             <div><h2 id="intro">What is T-Map?</h2><div/>
+            
+            
+                 <div class="info">
+                     <p>- T-Map is made by tourists for tourists.</p>
+                     <p>- T-Map will show you the fastest way to your favorite attraction with the subway.</p>
+                     <p>- As a tourist, you can easily make a travel plan for your stay in Oslo </p>
+                 </div>
+           
+                <section id="button">
+                    <a href="#showBox">For more information</a>
+                </section>  
+         
+         
+            </div>
+    </div>
+<!--Slutt på meny overskrift og button. Laget av Fredrik Bruseth med hjelp av Helene Margel på menu id'en-->
+    
+</div>
+    
+</body>
+</html>

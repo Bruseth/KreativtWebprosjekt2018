@@ -1,0 +1,73 @@
+<!--Laget av Fredrik Bruseth -->
+
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>Holmenkollen</title>
+        
+        <!--Linker sammen html og css fil. -->
+        <link rel="stylesheet" type="text/css" href="holmenkollen.css">
+    </head>
+    <body>
+        
+        <!--Hovedkontaineren for alle bildene som blir lagt inn -->
+        <div id="background">
+            
+            <!--Bildet av T-bane logoen lagt innunger id= t-logo. -->
+            <img src="imagesho/T-logo.png" id="t-logo">
+            
+            <!--a- tagg som kobler opp mot hovedsiden med en knapp -->
+            <a href="control-panel.html"><button type="button" id="btnMainPage">Back to mainpage</button></a>
+    
+            <!--Bildet av holmekollen som ligger under en div med id=JumpImg -->
+            <div id="kollenDiv" class="slides1">
+                <img src="imagesho/Holmenkollen_hopprenn_medium.jpg" id="jumpImg" class="slides1">
+                
+                <!--H1- tagg som lager overskrift for boks en med <p>-tagg med tekst til Holmenkollen- boksen -->
+                <h1 class="slides2" id="h1Kollen">Holmenkollen</h1>
+                <p id="kollen" class="slides1">The Holmenkollen area is a gateway to Nordmarka, one of the most popular recreational areas in the city. Tryvann and Frognerseteren are great starting points for hikes and trips summer and winter alike. </p>
+            </div>
+            <!--H1- tagg som lager overskrift for boks en med <p>-tagg med tekst til Finstua- boksen -->
+            <div id="finstuakDiv" class="slides2">
+                <img src="imagesho/68590824.jpg" class="slides2" id="finstuaImg">
+                <h1 class="slides2" id="h1Finstua">Finstua</h1>
+                <p id="pFinstua" class="slides2">The Restaurants in Holmenkollen are good places to try traditional Norwegian foods, be it five-course meals based on local ingredients or the famous apple cake served at Frognerseteren Restaurant. Great views of the city come standard.</p>
+            </div>
+            
+            <!--H1- tagg som lager overskrift for boks en med <p>-tagg med tekst til Scandic- boksen -->
+            <div id="scandicDiv" class="slides3">
+                <img src="imagesho/scandic-holmenkollenpark-facade-view.jpg" class="slides3" id="scandicImg">
+                <h1 class="slides3" id="h1Scandic">Scandic Holmenkollen</h1>
+                <p id="pScandic" class="slides3">The hills around Holmenkollen offers top-class hotels with conference facilities and a great view of Oslo.</p>
+            </div>
+            
+            <!--En div med bildet av et tog med classe trainStop og 3 forskjellige id'er -->
+            <div id="trainLine">
+                <img src="imagesho/tog%20ikon.png" id="trainModelImg">
+                <div id="trainStop1" class="trainStop"></div>
+                <div id="trainStop2" class="trainStop"></div>
+                <div id="trainStop3" class="trainStop"></div>
+            </div>
+            
+            <!--id'er som lager to overskrifter på hver sin side av siden -->
+            <h1 id="holmenkollennHead">Holmenkollen</h1>
+            <h2 id="frogneseterenrHead">Frogneseteren</h2>
+            
+            <!--Bildet av en skigåer lagt under id= skiing1 og klasse= skiing -->
+            <img id="skiing1" class="skiing" src="imagesho/skiing-40752_960_720.png">
+            
+            <!--Bildet av et snøflak blir lagt under class "snowFlakes" siden blidet blir brukt flere ganger -->
+            <img id=snowFlake1 class="snowFlakes" src="imagesho/snowflake-1919293_960_720.png">
+            <img id=snowFlake2 class="snowFlakes" src="imagesho/snowflake-1919293_960_720.png">
+            <img id=snowFlake3 class="snowFlakes" src="imagesho/snowflake-1919293_960_720.png">
+            
+            <!--Bildet av et tre blir lagt under class "trees" siden blidet blir brukt flere ganger -->
+            <img id="tree1" class="trees" src="imagesho/tre.png">
+            <img id="tree2" class="trees" src="imagesho/tre.png">
+            <img id="tree3" class="trees" src="imagesho/tre.png">
+            
+            
+        </div>
+    </body>
+</html>

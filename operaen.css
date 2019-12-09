@@ -1,0 +1,242 @@
+/*Kode laget av Eirik Wold*/
+body{
+    margin: 0;
+    position: relative;
+    background-image: url(imagesop/operaen1080.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#backgroundImg{
+    height: 720px;
+    width: 1500px;
+    position: fixed;
+    
+}
+
+#background{
+    border-top: 100px solid rgb(249, 166, 2);
+}
+
+#btnMainPage{
+    position: relative;
+    height: 50px;
+    width: 200px;
+    top: -75px;
+    left: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: cursive;
+    cursor: pointer;
+    text-align: center;
+     
+    text-decoration: none; /*definerer om det skal være underline eller noe annet*/
+    outline: none; /* samme gjelder for denne */
+    color: rgb(0, 0, 0);
+    background-color: rgb(240, 240, 240);
+    border: none; /* kan kanskje brukes til noe kult */
+    border-radius: 20px;
+    box-shadow: 0px 10px 8px rgb(153,153,153); /* Juster etter siden*/  
+} 
+
+
+
+#btnMainPage:hover {
+    background-color: rgb(26, 194, 255);
+}
+
+#btnMainPage:active {
+    background-color: rgb(153,153,153);
+    box-shadow: 0 4px #666;
+    transform: translateY(4px);
+
+}
+
+#operaenDiv {
+    height: 450px;
+    width: 200px;
+    left: -400px;
+    top: 150px;
+    border: 5px solid rgb(249, 166, 2);
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+}
+
+#operaenImg {
+    height: 100px;
+    width: 200px;
+}
+
+#operaen {
+    font-family: "sans-serif";
+    font-size: 20px;
+    font-style: oblique;
+    text-align: center;
+}
+
+#h1operaen {
+    top: 100px;
+    font-size: 20px;
+    left: 50px;
+    text-align: center;
+}
+
+@keyframes slides1{
+    from {left: -200px; opacity: 0;}
+    to {left: 350px; opacity: 1;}
+}
+
+.slides1{
+    animation: slides1 2s 2s forwards;
+}
+
+/*--------------------*/
+
+#programDiv {
+    height: 450px;
+    width: 200px;
+    border: 5px solid rgb(249, 166, 2);
+    left: -400px;
+    top: 150px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+}
+
+#programImg {
+    height: 100px;
+    width: 200px;
+}
+
+#h1program {
+    font-size: 20px;
+    text-align: center;
+}
+
+#pProgram {
+    font-size: 20px;
+    font-style: oblique;
+    text-align: center;
+}
+
+@keyframes slides2{
+    from {left: -200px; opacity: 0;}
+    to {left: 650px; opacity: 1;}
+}
+
+.slides2{
+    animation: slides2 2s 2s forwards;
+}
+
+/*--------------------*/
+
+#diningDiv {
+    height: 450px;
+    width: 200px;
+    border: 5px solid rgb(249, 166, 2);
+    left: -400px;
+    top: 150px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+}
+
+#diningImg {
+    height: 100px;
+    width: 200px;
+}
+
+#h1dining {
+    font-size: 20px;
+    text-align: center;
+}
+
+#pDining {
+    font-size: 20px;
+    font-style: oblique;
+    text-align: center;
+}
+
+@keyframes slides3{
+    from {left: -200px; opacity: 0;}
+    to {left: 950px; opacity: 1;}
+}
+
+.slides3{
+    animation: slides3 2s 2s forwards;
+}
+
+/*------------------------------*/
+
+#trainLine{
+    height: 2px;
+    width: 1348px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 110px;
+    left: 0px;
+    
+}
+
+#trainModelImg{
+    height: 200px;
+    width: 500px;
+    top: -120px;
+    left: 530px;
+    position: absolute;
+    z-index: 1;
+    animation: trainMove 2s;
+}
+
+@keyframes trainMove{
+    from {left: -300px;}
+    to {left: 520px;}
+}
+
+.trainStop{
+    height: 20px;
+    width: 2px;
+    background-color: rgb(0, 0, 0);
+    top: -10px;
+    position: absolute;
+}
+
+#trainStop1{
+    left: 100px;
+}
+
+#trainStop2{
+    left: 600px;
+}
+
+#trainStop3{
+    left: 1200px;
+}
+
+#jernbanetorgetHead {
+   position: absolute;
+    top: 1px;
+    left: 650px;
+    font-family: sans-serif;
+    font-weight: 900; 
+}
+
+#stortingetHead {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    font-family: sans-serif;
+    background-color: rgb(40, 40, 40);
+    color: rgb(249, 166, 2);
+    border-radius: 5px;
+    border: double rgb(249, 166, 2);
+    opacity: 0.7;
+}
+
+#t-logo{
+    width: 80px;
+    height: 80px;
+    right: 50px;
+    top: 5px;
+    position: absolute;
+}

@@ -1,0 +1,60 @@
+<!--Laget av Axel-->
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>Frognerseteren</title>
+        <link rel="stylesheet" type="text/css" href="frognerseteren.css">
+    </head>
+    <body>
+        
+        <!-- container divern som inneholder alle de visuelle elementne på siden -->
+        <div id="background">
+            <!-- Div for den røde doten ved navn dot -->
+            <div id="dot"></div>
+            <!-- En knapp med an side link rundt, denne tar deg tilbake til hovedsiden igjen-->
+            <a href="control-panel.html"><button type="button" id="btnMainPage">Back to mainpage</button></a>
+            <!-- image tag som henter tog ikonet-->
+            <img id="train" src="imagesfr/tog%20ikon.png">
+            <!--overskrift med tittelen-->
+            <h1 id="frognerseterenH">FROGNERSETEREN</h1>
+            
+            <!--en div som inneholder alle elementene som brukes for å presentere korketrekkeren. Setter en felles class på alle elementene så jeg kan bruke de i samme animasjon. -->
+            <div id="korketrekkernDiv" class="slides1">
+                <img src="imagesfr/korketrekkern.jpg" id="korketrekkernImg" class="slides1">
+                <h1 class="slides1" id="h1Korketrekkern">Korketrekkeren</h1>
+                <p id="pKorketrekkern" class="slides"> Korketrekkeren is a popular sledding hill in Oslo that runs for about 2500m from Frognerseteren station to Midstuen station. The hill is usually prepared every morning in the winter season. You can rent a toboggan at the top of the hill.</p>
+            </div>
+            
+            <!--en div som inneholder alle elementene som brukes for å presentere frognerseteren. Setter en felles class på alle elementene så jeg kan bruke de i samme animasjon-->
+            <div id="frognerseterenDiv" class="slides2">
+                <img src="imagesfr/frognerseteren.jpg" id="frognerseterenImg" class="slides2">
+                <h1 class="slides2" id="h1Frognerseteren">Frognerseteren</h1>
+                <p id="pFrognerseteren" class="slides2">Frognerseteren is a popular year-round hiking area in Nordmarka, Oslo. 
+                    Frognerseteren became an even more used starting point for trips in Nordmarka both summer and winter after Holmenkollbanen was opened in 1898, and especially after it was extended to Frognerseteren station in 1916.</p>
+            </div>
+            
+            <!--en div som inneholder alle elementene som brukes for å presentere tryvann. Setter en felles class på alle elementene så jeg kan bruke de i samme animasjon-->
+            <div id="tryvannDiv" class="slides3">
+                <img src="imagesfr/tryvann.jpg" class="slides3" id="tryvannImg">
+                <h1 class="slides3" id="h1Tryvann">Tryvann</h1>
+                <p id="pTryvann" class="slides3"> 
+                Oslo Vinterpark is a ski resort in the area of Tryvannshøgda. The resort has 18 slopes with 11 lifts. The first ski trail in the area opened in 1938 as the first north of the Alps. The longest trail of the resort is Wyllerløypa at 1400 meters with a fall of 381 meters.</p>
+            </div>
+            
+            <!-- image tags som henter alle tre ikonene. gir alle trerne en felles class-->
+            <img id="tree1" class="tree" src="imagesfr/tre.png">
+            <img id="tree2" class="tree" src="imagesfr/tre.png">
+            <img id="tree3" class="tree" src="imagesfr/tre.png">
+            <img id="tree4" class="tree" src="imagesfr/tre.png">
+            <img id="tree5" class="tree" src="imagesfr/tre.png">
+            <img id="tree6" class="tree" src="imagesfr/tre.png">
+            
+            <!-- image tags som henter alle fjell ikonene. gir alle fjellene en felles class-->
+            <img id="fjell1" class="fjell" src="imagesfr/fjell.png">
+            <img id="fjell2" class="fjell" src="imagesfr/fjell.png">
+            <img id="fjell3" class="fjell" src="imagesfr/fjell.png">
+            
+        </div>
+    </body>
+</html>

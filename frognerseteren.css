@@ -1,0 +1,339 @@
+/*laget av Axel*/
+body{
+    /*setter dimensjoner på siden og linker til et bakgrunnsbilde*/
+    margin: 0;
+    position: relative;
+    background-image: url(images/Frognerseteren%20bakgrunn.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 753px;
+    width: 100%;
+}
+
+#background{
+    /*linker til containeren som alle de underliggende elementene ligger i, og legger til en blå border på toppen*/
+    border-top: 100px solid rgb(0,191,255);
+}
+
+#dot{
+    /*lager en boks*/
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    /*gjør boksen til en sirkel*/
+    border-radius: 50%;
+    /*setter farge og posisjon på sirkelen*/ 
+    background-color: red;
+    left: 750px;
+    top: 40px;
+}
+
+.tree{
+    /*felles kode for alle tre ikonene*/
+    position: absolute;
+    height: 60px;
+    top: 45px;
+    z-index: 1;
+}
+/*setter posisjon på hvert enkelt tre*/
+#tree1{
+    left: 220px;
+}
+#tree2{
+    left: 420px;
+}
+#tree3{
+    left: 620px;
+}
+#tree4{
+    left: 820px;
+}
+#tree5{
+    left: 1020px;
+}
+#tree6{
+    left: 1220px;
+}
+
+.fjell{
+    /*felles kode for de tre fjellene*/
+    position: absolute;
+    height: 150px; 
+    top: 0px; 
+    z-index: 1;
+}
+
+/*setter posisjon på hvert enkelt fjell*/
+#fjell1{
+    left: 270px;
+}
+
+#fjell2{
+    left: 870px;
+}
+
+#fjell3{
+    left: 1300px;
+}
+
+
+#btnMainPage{
+    /*lager en knapp som linker tilbake til hovedsiden*/
+    position: relative;
+    height: 50px;
+    width: 200px;
+    top: -75px;
+    left: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: cursive;
+    cursor: pointer;
+    text-align: center;
+     
+    text-decoration: none; /*definerer om det skal være underline eller noe annet*/
+    outline: none; /* samme gjelder for denne */
+    color: black;
+    background-color: rgb(240, 240, 240);
+    border: none; /* kan kanskje brukes til noe kult */
+    border-radius: 20px;
+    box-shadow: 0px 10px 8px rgb(153,153,153); /* Juster etter siden*/
+
+} 
+
+/*lager en hover funksjon som skifter farge på knappen når du hovrer over den*/
+#btnMainPage:hover {
+    background-color: rgb(0,191,200);
+    
+}
+
+
+/*henter inn korketrekker diven og gir den posisjon og størrelse*/
+#korketrekkernDiv{
+    position: relative;
+    height: 430px;
+    width: 200px;
+    /*setter hvit bakgrunnsfarge på dive*/
+    background-color: rgb(255,255,255);
+    /*gir en border farge som matcher top borderen på siden*/
+    border: 5px solid rgb(0,191,255);
+    left: -300px;
+}
+
+/*henter inn bilde til korketrekker diven og gir det størrelse og posisjon*/
+#korketrekkernImg{
+    height: 100px;
+    width: 200px;
+    left: 200px;
+}
+
+/*lager en funksjon som forstørrer bilde når du hovrer over det*/
+#korketrekkernImg:hover{
+    animation: kImg 1s;
+    animation-fill-mode: forwards;
+}
+
+/*keyframes funksjon dom definerer hva som skal skje med bilde*/
+@keyframes kImg{
+    0%{
+        height: 100px;
+    }
+    100%{
+        height: 120px;
+    }
+}
+
+/*henter inn overskriften for korketrekkerdiven og plasserer den og gir den størrelse*/
+#h1Korketrekkern{
+    left: 420px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*designer paragrafen som ligger i korketrekker diven*/
+#pKorketrekkern{
+    position: relative;
+    text-align: center;
+    font-family: "sans-serif";
+    font-size: 20px;
+    font-style: oblique;
+}
+
+/*lager en animasjon som flytter korketrekkern diven inn på siden og justerer gjennomsynligheten på diven*/
+@keyframes slides1{
+    from {left: -200px; opacity: 0;}
+    to {left: 420px; opacity: 1;}
+}
+
+.slides1{
+    /*definerer hvor lenge animasjonen skal vare og delayet på animasjonen*/
+    animation: slides1 2s;
+    animation-delay: 3s;
+    /*denne funksjonene gjør at animasjonen ikke går tilbake til startverdi når animasjonen er ferdig*/
+    animation-fill-mode: forwards;
+}
+
+/*henter inn frognerseter diven og gir den posisjon og størrelse*/
+#frognerseterenDiv{
+    position: absolute;
+    height: 520px;
+    width: 200px;
+    left: -300px;
+    top: 150px;
+    /*setter hvit bakgrunnsfarge på dive*/
+    background-color: rgb(255, 255, 255);
+    /*gir en border farge som matcher top borderen på siden*/
+    border: 5px solid rgb(0,191,255);   
+}
+
+/*henter inn bilde til frognerseter diven og gir det størrelse*/
+#frognerseterenImg{
+    height: 100px;
+    width: 200px;
+}
+
+/*lager en funksjon som forstørrer bilde når du hovrer over det*/
+#frognerseterenImg:hover{
+    animation: frImg 1s;
+    animation-fill-mode: forwards;
+}
+
+/*keyframes funksjon dom definerer hva som skal skje med bilde*/
+@keyframes frImg{
+    0%{
+        height: 100px;
+    }
+    100%{
+        height: 120px;
+    }
+}
+
+/*henter inn overskriften for frognerseter diven og plasserer den og gir den størrelse*/
+#h1Frognerseteren{
+    top: 100px;
+    font-size: 20px;
+    left: 50px;
+    text-align: center;
+}
+
+/*designer paragrafen som ligger i frognerseter diven*/
+#pFrognerseteren{
+    font-family: "sans-serif";
+    font-size: 20px;
+    font-style: oblique;
+    text-align: center;
+}
+
+/*lager en animasjon som flytter frognerseter diven inn på siden og justerer gjennomsynligheten på diven*/
+@keyframes slides2{
+    from {left: -200px; opacity: 0;}
+    to {left: 670px; opacity: 1;}
+}
+
+.slides2{
+    /*definerer hvor lenge animasjonen skal vare og delayet på animasjonen*/
+    animation: slides2 2s;
+    animation-delay: 3s;
+    /*denne funksjonene gjør at animasjonen ikke går tilbake til startverdi når animasjonen er ferdig*/
+    animation-fill-mode: forwards;
+}
+
+/*henter inn tryvann diven og gir den posisjon og størrelse*/
+#tryvannDiv{
+    height: 450px;
+    width: 200px;
+    /*gir en border farge som matcher top borderen på siden*/
+    border: 5px solid rgb(0,191,255);
+    left: -300px;
+    top: 150px;
+    position: absolute;
+    /*setter hvit bakgrunnsfarge på dive*/
+    background-color: rgb(255, 255, 255);
+}
+
+/*henter inn bilde til tryvann diven og gir det størrelse*/
+#tryvannImg{
+    height: 100px;
+    width: 200px;
+}
+
+/*lager en funksjon som forstørrer bilde når du hovrer over det*/
+#tryvannImg:hover{
+    animation: trImg 1s normal;
+    animation-fill-mode: forwards;
+}
+
+/*keyframes funksjon dom definerer hva som skal skje med bilde*/
+@keyframes trImg{
+    0%{
+        height: 100px;
+    }
+    100%{
+        height: 120px;
+    }
+}
+
+/*henter inn overskriften for tryvann diven og plasserer den og gir den størrelse*/
+#h1Tryvann{
+    font-size: 20px;
+    text-align: center;
+}
+
+/*designer paragrafen som ligger i tryvann diven*/
+#pTryvann{
+    font-size: 20px;
+    font-style: oblique;
+    text-align: center;
+}
+
+/*lager en animasjon som flytter tryvann diven inn på siden og justerer gjennomsynligheten på diven*/
+@keyframes slides3{
+    from {left: -200px; opacity: 0;}
+    to {left: 920px; opacity: 1;}
+}
+
+.slides3{
+    /*lengde og delay på animasjonen*/
+    animation: slides3 2s;
+    animation-delay: 3s;
+    /*denne funksjonene gjør at animasjonen ikke går tilbake til startverdi når animasjonen er ferdig*/
+    animation-fill-mode: forwards;
+}
+
+/*henter inn overskriften for hele siden*/ 
+#frognerseterenH{
+    /*setter posisjon og størrelse på overskiften*/
+    position: absolute;
+    font-family: sans-serif;
+    font-weight: 900;
+    top: -25px;
+    left: 600px;
+}
+
+/*henter inn tog ikonet og setter posisjon, plassering, og størrelse*/
+#train{
+    position: absolute;
+    width: 500px;
+    top: -70px;
+    left: 553px;
+    z-index: 2;
+    /*refererer til animasjonen som flytter toget og setter den til 3 sekunder*/
+    animation: trainMoves 3s;
+}
+
+/*keyframes animasjon som flytter toget inn på siden*/
+@keyframes trainMoves{
+    0%{
+    top: -70px;
+    left: -300px;
+    }
+    100%{
+    top:-70px;
+    left: 553px; 
+    }
+}
+
+
+
+
+

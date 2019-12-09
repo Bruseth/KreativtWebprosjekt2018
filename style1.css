@@ -1,0 +1,554 @@
+/* Start på stylesheet for control-panel.html. */
+
+/*kodet av Axel Grøner*/
+#container {
+    /*setter parametere på containeren*/
+    height: 753px;
+    width: 100%; /* max-width */
+    position: relative;
+    /* alt som havner utenfor containeren blir gjort usynlig*/
+    overflow: hidden;
+}
+
+body {
+    background: rgb(255,255,255);
+    margin: 0;
+}
+
+#background {
+    position: absolute;
+}
+
+#kart {
+    /* posisjon og størrelse på bildet av kartet*/
+    position: absolute;
+    z-index: 2;
+    height: 650px;
+    top: 50px; 
+    left: 370px;
+    opacity: 0;
+    /*animasjon som fader inn kartet*/
+    animation-name: kart;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards; 
+}
+
+#city{
+    /*setter posisjon og størrelse på bakgrunnsbildet*/
+    position: absolute;
+    height: 753px;
+    width: 1550px; 
+}
+/* Slutt på kode av axel*/
+
+/*kodet av Eirik*/
+#opacityBackground {
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(240,240,240);
+    /*endringer gjort av Axel Grøner underveis så det skulle passe bedre til hovedsiden*/
+    width: 750px;
+    height: 600px;
+    left: 340px;
+    top: 40px;
+    border-radius: 0;
+    border-style: ridge;
+    border-color: rgb(150,150,150);
+    border-width: 20px;
+    opacity: 0;
+    animation-name: opBackground;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+/* Slutt på kode av Eirik*/
+
+
+/* Start på Rødeknapper. Kodet av Helene Margel. De røde knappene skal vise hvor på kartet attraksjonene i menyen er. */
+
+.mapMarker {
+    position: absolute;
+    z-index: 3 !important;
+    height: 25px; 
+    width: 25px;  
+    color: rgb(220,20,60);
+    background-color: rgb(220,20,60);  
+    display: block; 
+    opacity: 1;  
+    border-radius: 50%;  
+    
+    animation-name: mapMarkerAnimation; 
+    animation-duration: 4s; 
+    animation-iteration-count: infinite;
+    animation-play-state: running;    
+}
+
+#mapMarker1 {
+    left: 732px; 
+    top: 365px; 
+    display: none;
+}
+
+#mapMarker2 {
+    left: 440px; 
+    top: 203px;   
+    display: none; 
+}
+
+#mapMarker3 {
+    left: 789px; 
+    top: 365px;   
+    display: none; 
+ }
+
+#mapMarker4 {
+    left: 382px; 
+    top: 504px;  
+    display: none; 
+}
+
+#mapMarker5 {
+    left: 383px; 
+    top: 144px;  
+    display: none; 
+}
+
+/* Slutt på Rødeknapper */
+
+/* Start på meny for hovedattraksjonene. Kodet av Helene Margel med hjelp av Axel Grøner (see kommentar). Menyen tar for seg hovedattraksjonene og skal linkes til de røde knappene */
+#menu {
+    position: absolute;
+    z-index: 3; /* Kodet av Axel Grøner. En utfordring oppstod når de røde knappene lå seg bak kartet. FØrste løsning var å sette z-indeks !important på knappene. Men siden knappene og menyen var linket sammen med a tag, måtte også menyen få høyere z-indeks. Dette ble oppdaget og fikset av Axel Grøner. */
+    top: 50px;
+    left: 10px;
+    height: 400px;
+    width: 310px;
+    border-style: solid; 
+    border-color: rgb(150,150,150);
+    border-width: 10px; 
+    color: rgb(100,30,30);
+    background-color: rgb(220,220,220);
+    font-family: font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    animation-name: menu;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#header {
+    height: 400px;
+}
+
+#menuTitle {
+    text-decoration: underline;
+}
+
+.menuTitles:hover {
+    color: rgb(220,20,60);
+    text-decoration: underline;
+}
+
+#operaTitle:hover #mapMarker1 {
+    display: block; 
+}
+
+#holmenkollenTitle:hover #mapMarker2 {
+    display: block; 
+}
+
+#munchTitle:hover #mapMarker3 {
+    display: block; 
+}
+
+#kolsåsTitle:hover #mapMarker4 {
+    display: block; 
+}
+
+#frognerseterenTitle:hover #mapMarker5 {
+    display: block; 
+}
+
+/* Slutt på meny for hovedattraksjonene. Ferdig koding av Helene Margel */
+
+
+/*Kode laget av Fredrik Bruseth med hjelp av Helen Margel */
+/*-Menu2-id'en tar for seg menyen til høyre for siden, med overskrift, posisjonering, farge, skrift og amimasjon -*/
+#menu2 {
+    position: relative;
+    top: 5%;
+    left: 1160px;
+    height: 400px;
+    width: 310px;
+    border-style: solid; 
+    border-color: rgb(150,150,150);
+    border-width: 10px; 
+    color: rgb(100,30,30);
+    background-color: rgb(220,220,220);
+    font-family: font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    animation-name: menu;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+/*-Intro id'en definerer underpunktet med posisjonering skrift og farge.-*/
+#intro {
+    position: absolute;
+    right: 95px;
+    font-size: 16px;
+    top: 60px;
+    font-family: font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+
+/*-info klassen har blitt tatt i bruk for at alle <p>-taggene får samme skrift og farge  som resten av boksen. Under blir posisjonering definert-*/
+.info {
+    position: absolute;
+    top: 90px;
+    text-align: left;
+    margin: 10px;
+}
+
+/*Slutt kode av Fredrik Bruseth */
+
+/* KEYFRAMES */
+
+@keyframes opBackground {
+0% {opacity: 0}
+100% {opacity: 0.7}
+}
+
+@keyframes kart {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes menu {
+    0% {top: -1000px}
+    100% {top: 50px;}
+}
+
+/* Kodet av Helene Margel. */
+@keyframes mapMarkerAnimation { 
+    0% { opacity: 0;}
+    5% { opacity:0.5;}
+    10%{ opacity: 1;}
+    20%{ opacity: 0.8;}
+    30%{ opacity: 0.4;}
+    40%{ opacity: 0.8;}
+    50%{ opacity: 1;}
+    70%{ opacity: 0.5;}
+    80%{ opacity: 1;}
+    95%{ opacity: 0.5;}
+    100%{ opacity: 0;}
+}
+ /* slutt på kode av Helene Margel */
+
+/* kodet av Axel Grøner */
+.tog {
+    /*felles parametere for alle tog ikonene*/
+    position: absolute; 
+    height: 100px; 
+    z-index: 3;
+    /*måtte gi togene en negativ startverdi. Siden animasjonen for togene har en delay på tre sekunder. Ellers ble togene synlig på siden før animasjonen begynte. Dette kunne potensielt blitt gjort med display funksjon, men jeg fant denne løsninen enklere. */
+    top: -200px;
+    left: -200px;
+}
+
+/* henter inn hvert enkelt tog og legger inn animasjonen for posisjonen*/
+#tog1 {
+    /*animasjonen skal vare i 15 sekunder og gå i all evighet*/
+    animation: togMoves 15s infinite ; 
+    /*denne funksjonen gjør at togene går tilbake igjen i samme retning*/
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+}
+
+@keyframes togMoves{
+    /*spesifiserer alle punktene der toget skifter retning*/
+    0%{
+        left: 340px;
+        top: 160px;
+    }
+    50%{
+        left: 555px;
+        top: 385px; 
+    }
+    80%{
+        left: 850px;
+        top: 385px;
+    }
+    100%{
+        left: 850px;
+        top: 515px;
+    }
+}
+
+#tog2 {
+    animation: togMoves2 15s infinite ; 
+    animation-direction: alternate;
+    animation-timing-function: linear; 
+    animation-delay: 3s;
+}
+
+@keyframes togMoves2 {
+    0%{
+        left: 340px;
+        top: 390px;
+    }
+    75%{
+        left: 950px;
+        top: 390px;
+    }
+    100%{
+        left: 950px;
+        top: 300px;
+    }
+}
+
+#tog3 {
+    animation: togMoves3 15s infinite ; 
+    animation-direction: alternate;
+    animation-timing-function: linear; 
+    animation-delay: 3s;
+}
+
+@keyframes togMoves3 {
+    0%{
+        left: 340px;
+        top: 520px;
+    }
+    15%{
+        left: 465px;
+        top: 520px; 
+    }
+    30%{
+        left: 465px;
+        top: 395px;
+    }
+    75%{
+        left: 950px;
+        top: 395px;
+    }
+    100%{
+        left: 950px;
+        top: 515px;
+    }
+}
+
+#tog4 {
+    animation: togMoves4 15s infinite ; 
+    animation-direction: alternate;
+    animation-timing-function: linear; 
+    animation-delay: 3s;
+}
+
+@keyframes togMoves4 {
+    0%{
+        left:587px;
+        top: 150px;
+    }
+    10%{
+        left:587px;
+        top: 367px;
+    }    
+    20%{
+        left:770px;
+        top: 367px;
+    }
+    30%{
+        left:770px;
+        top: 238px;
+    }
+    40%{
+        left:580px;
+        top: 238px;
+    }
+    50%{
+        left:580px;
+        top: 375px;
+    }
+    60%{
+        left:778px;
+        top: 375px;
+    }
+    70%{
+        left:778px;
+        top: 290px;;
+    }
+    100%{
+        left:980px;
+        top: 80px;
+    }
+}
+
+#tog5 {
+    animation: togMoves5 15s infinite; 
+    animation-direction: alternate;
+    animation-timing-function: linear; 
+    animation-delay: 3s;
+}
+
+@keyframes togMoves5 {
+    0%{
+        left: 855px;
+        top: 515px;
+    }
+    15%{
+        left: 855px;
+        top: 380px;
+    }    
+    40%{
+        left: 575px;
+        top: 380px;
+    }
+    70%{
+        left: 575px;
+        top: 232px;
+    }
+    85%{
+        left: 825px;
+        top: 232px;
+    }
+    100%{
+        left:975px;
+        top: 80px;
+    }
+}
+/* Slutt på kode av Axel Grøner */
+
+/*Kode laget av Fredrik Bruseth */
+/*-Klassen modal blir brukt for boksen rundt hovedinnholdet informasjonen. Under blir posisjonering, størelse, viktighet og animasjon definert-*/
+
+.modal {
+    display: none;
+    position: relative;
+    left: 10px;
+    top: 0; 
+    bottom: 0;
+    right: 0;
+    width: 1500px; /*Hvordan boksen bak skal være*/
+    height: 710px;
+    z-index: 4 !important;
+    background:rgba(255,255,255,0.8);         
+}
+
+@keyframes boxMove {
+    from {top:-100px;opacity: 0;}
+    to {top:0px;opacity:1;}
+}
+/*-----Slutt .modal-----*/
+
+
+/*-Button id'en definerer hvordan knappen skal se ut med bestemmelser for farge, posisjonering, tekst og animasjon. Videre har også :hover, :active og :target blitt brukt for å lage effekter.-*/
+
+#button {
+    display: inline-block; 
+    padding: 10px 15px;
+    font-size: 15px;
+    font-family: "bookman";
+    cursor: pointer;
+    text-align: center;
+    position: fixed;
+    left: 1260px;
+    top: 500px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    box-shadow: 0px 10px 8px rgb(153,153,153); 
+    animation-name: buttonMove;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes buttonMove {
+    0% {top: -1000px}
+    100% {top: 500px;}
+}
+
+
+#button:hover {
+    background-color: rgb(224, 233, 235);
+}
+
+#button:active {
+    background-color: rgb(179, 179, 179);
+    box-shadow: 0 5px rgb(102, 102, 102);
+    transform: translateY(4px);
+}
+
+.modal:target{
+    display: table;
+    position: absolute;
+}
+/*----Slutt #button----*/
+
+/*-Klassen modal-dialog definerer hvor informasjons boksen skal være når knappen har blitt trykt på.-*/
+
+.modal-dialog {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*-Klassene .modal-dialog og .modal-content definerer både boksen og innholdet om posisjonering, farge, skrift, skygge, størelse og animasjon. Dette gjelder også for <h>- taggene og <p>- taggene.-*/
+
+.modal-dialog .modal-content {
+    margin: auto;
+    background-image: linear-gradient(to right, rgb(255, 165, 0), 	rgb(255, 255, 255)); 
+    position: relative;
+    padding: 0;
+    outline: 0;
+    border: 1px rgb(119, 119, 119) solid; 
+    text-align: justify;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*legger til skygge rundt hele boksen */
+    animation-name: boxMove;
+    animation-duration: 0.8s;
+}
+      
+/*-Klassen .close definerer posisjonering, størrelse og farge for X-knappen. For .close har det også blitt lagt til :hover og :focuse effekt-*/
+
+.close { 
+    text-decoration: none; 
+    float: right;
+    position: relative;
+    top: 2px;
+    right: 10px;
+    font-size: 17px;
+    font-weight: bold;        
+    color: rgb(153, 153, 153);
+}
+
+.close:hover, .close:focus {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+/*----Slutt .close----*/
+
+/*-Klassen .box-container velger utformingsboksen for overskriften-*/
+    .box-container {
+        padding: 2px 16px;
+}
+
+/*-Klassen .header definerer overskriften til boksen med tekst og farger-*/
+.header {
+  background-color: rgb(255, 201, 102); 
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+/*-Klassen .footer definerer underteksten i boksen med farge, størrelse og skrift -*/
+.footer {
+    background-color: rgb(255, 201, 102);
+    font-family: "bookman";
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+/*Slutt på kode av Fredrik Bruseth */
+
+/* Slutt på stylesheet for control-panel.html */
